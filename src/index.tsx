@@ -9,7 +9,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <App name="sunny" age={32}/>
   </React.StrictMode>
 );
 

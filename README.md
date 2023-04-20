@@ -75,11 +75,11 @@
         onClick: (name: string) => void; // 함수를 props로 받을 경우
         }
 
-        function 콤퍼넌트명({name, mark, optional, onClick}: 타입명) {
+        function 컴포넌트명({name, mark, optional, onClick}: 타입명) {
         return <div>Hello, {name} {mark}</div>;
 
 
-        export default 콤퍼넌트명;
+        export default 컴포넌트명;
 
         
 
