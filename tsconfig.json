@@ -1,4 +1,4 @@
-{
+{ //ts-loader
   "compilerOptions": {
     "target": "es5",
     "lib": [
@@ -6,7 +6,7 @@
       "dom.iterable",
       "esnext"
     ],
-    "allowJs": true,
+    "allowJs": true, //js파일도 컴파일 대상
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -24,3 +24,5 @@
     "src"
   ]
 }
+
+//https://www.typescriptlang.org/tsconfig
