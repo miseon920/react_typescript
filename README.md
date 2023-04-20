@@ -4,7 +4,11 @@
 2. npm i @types/react
 3. 통합적으로 npx create-react-app . --template typescript 설치가능
 
+
 ## .ts파일은 pure typescript 파일
+
+-------------------------------------------------------------
+
 
 ## .tsx는 typescript의 react문법을 담아내기 위한 확장자
 
@@ -23,9 +27,10 @@
 
     >
 
-    1. 메인 엔트리 파일
-    2. React.Dom.render 수행
-    3. pwa(프로그레시브 웹 앱 = HTML, CSS, JavaScript와 같은 웹 기술로 만드는 앱)를 위한 서비스 워커 등록 작업  
+        1. 메인 엔트리 파일
+        2. React.Dom.render 수행
+        3. pwa(프로그레시브 웹 앱 = HTML, CSS, JavaScript와 같은 웹 기술로 만드는 앱)를 위한 서비스 워커 등록 작업  
+
         <https://blog.wishket.com/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%A0%88%EC%8B%9C%EB%B8%8C-%EC%9B%B9-%EC%95%B1pwa%EC%9D%B4%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B4%EB%A9%B0-%EC%99%9C-%ED%95%84%EC%9A%94%ED%95%9C%EA%B0%80/>
 
 2.  index.css
@@ -60,23 +65,23 @@
         <https://blog.logrocket.com/pwa-create-react-app-service-workers/>
 
 7.  >   
-        <pre>
-                import React from "react";
+        
+        import React from "react";
 
-                interface 타입명 {
-                name: string;
-                mark: string;
-                optional?: string; // 선택적인 경우
-                onClick: (name: string) => void; // 함수를 props로 받을 경우
-                }
+        interface 타입명 {
+        name: string;
+        mark: string;
+        optional?: string; // 선택적인 경우
+        onClick: (name: string) => void; // 함수를 props로 받을 경우
+        }
 
-                function 콤퍼넌트명({name, mark, optional, onClick}: 타입명) {
-                return <div>Hello, {name} {mark}</div>;
+        function 콤퍼넌트명({name, mark, optional, onClick}: 타입명) {
+        return <div>Hello, {name} {mark}</div>;
 
-    
-                export default 콤퍼넌트명;
 
-        </pre>
+        export default 콤퍼넌트명;
+
+        
 
 <https://www.freecodecamp.org/korean/news/best-practices-for-react/>
 <https://github.com/typescript-cheatsheets/react#reacttypescript-cheatsheets>
@@ -91,9 +96,9 @@
 
     2. state : 컴포넌트 내부의 데이터
 
-        - 클래스와 프로퍼티는 다름(프로퍼티를 변경해도 render가 호출되지 않음)
-        - 생성자 혹은 프로퍼티 초기 할당으로 state 초기값을 할당해 줘야함
-        - 내부에서 변경되더라도 setState 함수를 이용해야 render가 호출됨
+    - 클래스와 프로퍼티는 다름(프로퍼티를 변경해도 render가 호출되지 않음)
+    - 생성자 혹은 프로퍼티 초기 할당으로 state 초기값을 할당해 줘야함
+    - 내부에서 변경되더라도 setState 함수를 이용해야 render가 호출됨
 
 
 9. 
