@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
+import { AppState } from "../App";
 
-const Sub = () => {
-  return (
-    <div>Sub</div>
-  )
-}
-
-export default Sub
+const Sub = ({children}:AppState) => {
+    return (
+        <div>
+            {children} 
+        </div>
+    );
+};
+export default Sub;

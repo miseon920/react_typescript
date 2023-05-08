@@ -103,4 +103,39 @@
     - 내부에서 변경되더라도 setState 함수를 이용해야 render가 호출됨
 
 
-9. 
+9. Composition(합성)
+    
+    상위에서 재사용하고 싶은 것을 받아서 사용하는 것이다.
+    계속 props를 전달해줘야 하므로 비효율 적이다. - 리덕스나 다른 상태관리툴로 관리함
+
+    ------------------------------------------------------------------------
+
+    리액트에서 상속하는 방법은 없으므로 컴포넌트에서 UI 외의 기능을 재사용 하고 싶을때 상속을 하기보다는 자바스크립트 모듈로 분리해서 사용하는 것이 좋다.
+
+    <https://ko.legacy.reactjs.org/docs/composition-vs-inheritance.html>
+
+10. Pure컴포넌트와 기본 컴포넌트 차이 
+    > Pure컴포넌트
+    - State/Props는 불변 객체여야 한다.
+    - State/Props에는 계층 구조가 없어야 한다.
+    - shouldComponentUpdate()를 사용하면 얕은 비교만 수행한다고 추측한다.
+    - PureComponent일때 이전 컴포넌트와 현재 컴포넌트가 다를 때만 false가 나오므로 값만 바뀌어서는 안됨(얕은 비교) 
+
+    >
+    1. React.Component.shouldComponentUpdate: 렌더링 프로세스 초기에 호출되는 선택적 클래스 컴포넌트 생명 주기 메서드
+    2. false를 반환하면 리액트는 컴포넌트 렌더링을 건너뛴다.
+    3. 렌더링 여부를 결정하는 boolean 결과값을 계산하는데 사용할 로직을 포함할 수 있고 가장 일반적인 방법은 컴포넌트의 props 및 상태가 이전과 달라졌는지 확인하고 변경되지 않았으면 false를 반환하는 것
+    3. React.PureComponent: 이러한 props 및 상태 비교는 shouldComponentUpdate를 구현하는 가장 일반적인 방법이기 때문에 PureComponent 기반 클래스는 기본적으로 해당 동작을 구현하며 Component + shouldComponentUpdate 대신 사용할 수 있다.
+
+    > 차이점
+    - 일반 컴포넌트는 props, state가 바뀌면 무조건 render
+    - Pure컴포넌트는 shouldComponentUpdate 가 다른방식으로 구현되어져 있음
+    - immutable.js를 사용하는 이유
+    - Pure컴포넌트는 props가 변경되지 않는한 부모가 렌더링 되어도 다시 렌더링 되지 않음
+    - 모든 컴포넌트를 Pure컴포넌트로 만드는 것은 성능상 이점이 있는 것은 아님
+    <https://pks2974.medium.com/immutable-js-%EA%B0%84%EB%8B%A8%EC%A0%95%EB%A6%AC-bbd5ad20bbdf>
+
+11. Refs
+
+- ref를 이용해서 랜더하지 않고 하위 요소를 다룰 수 있다.
+- 예) input의 포커스를 줄때, 돔을 직접적으로 다룰 수 있다.
